@@ -1,0 +1,704 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Jack’s 510 Racing</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(142, 58, 1, 0.141); }
+.select-value-color-orange { background-color: rgba(213, 96, 0, 0.188); }
+.select-value-color-yellow { background-color: rgba(209, 155, 0, 0.238); }
+.select-value-color-green { background-color: rgba(1, 104, 42, 0.145); }
+.select-value-color-blue { background-color: rgba(0, 108, 191, 0.156); }
+.select-value-color-purple { background-color: rgba(104, 1, 184, 0.125); }
+.select-value-color-pink { background-color: rgba(204, 1, 88, 0.137); }
+.select-value-color-red { background-color: rgba(228, 26, 0, 0.148); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="214d0c64-fa2a-80ff-9746-fc38258ef433" class="page sans"><header><img class="page-cover-image" src="Jacks_510_Racing_main_capsule%201.png" style="object-position:center 50%"/><h1 class="page-title">Jack’s 510 Racing</h1><p class="page-description"></p></header><div class="page-body"><div id="214d0c64-fa2a-81fd-9b2d-fba98eade5be" class="column-list"><div id="214d0c64-fa2a-8166-8cdd-d4ffa0f6a271" style="width:31.25%" class="column"><div><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="214d0c64-fa2a-817d-afad-c43b5dd6e2f2"><div style="font-size:1.5em"><span class="icon">✉️</span></div><div style="width:100%"><strong>FOR PRESS INQUIRIES PLEASE CONTACT ME AT</strong><h3 id="214d0c64-fa2a-81b0-921c-db7d8ac9f2e5" class="">heartingNinja@gmail.com</h3></div></figure></div><figure class="callout" style="white-space:pre-wrap;display:flex" id="214d0c64-fa2a-81c4-996a-f34a4f9e353e"><div style="width:100%"><strong>Developer<br/>heartingNinja<br/><br/>Genre<br/>Racing - Chaos - Destruction<br/><br/>Release date<br/>Winter 2025<br/><br/>Platforms<br/>Windows<br/><br/>Players<br/></strong>Solo<strong><br/><br/>Store page link<br/></strong><strong><a href="https://store.steampowered.com/app/3219800/Jacks_510_Racing/">Jack’s 510 Racing</a></strong><strong><br/><br/>Socials<br/></strong><a href="https://x.com/hearting_Ninja">X </a>| <a href="https://discord.gg/aMAnvmZ564">Discord </a>| <a href="https://www.reddit.com/user/heartingNinja/">Reddit</a></div></figure><p id="214d0c64-fa2a-8179-9ea7-e13322dabe1d" class="">
+</p><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="214d0c64-fa2a-81c4-aeae-e2a97ade61e8"><div style="width:100%"><h2 id="214d0c64-fa2a-81bf-b5ab-e58e237e5b45" class=""><strong>ABOUT THE STUDIO</strong></h2><div><figure id="214d0c64-fa2a-81ae-8929-e77aec28628f" class="image"><a href="heartingNinja.png"><img style="width:272.04998779296875px" src="heartingNinja.png"/></a></figure><p id="214d0c64-fa2a-8184-95c5-cb625a56fdb8" class="">Solo Developer heartingNinja</p></div><p id="219d0c64-fa2a-802c-b352-e9572b037837" class="">I have lived in China for 3 years, Siem Reap Cambodia 6 months, Vietnam 5 years. Currently based out of California and planning to move back to SEA. </p></div></figure><p id="214d0c64-fa2a-805a-acbd-ca9a44688979" class="">
+</p></div><div id="214d0c64-fa2a-8186-88b0-e3700aa72d84" style="width:68.75%" class="column"><h1 id="214d0c64-fa2a-81fa-b3d3-ebda3379de26" class="block-color-gray_background">About the game</h1><p id="214d0c64-fa2a-81a1-a1b6-e080210eb571" class="">An arcade driving game that’s all about chaos, speed, and pure fun.  Set in an open world with connecting island and three game modes. Inspired by the cult classic Death Race 2000 and older racing video games. Made by a solo developer.</p><h2 id="214d0c64-fa2a-811f-8ece-c136b4ec687a" class="block-color-gray_background">Key features</h2><ul id="214d0c64-fa2a-815b-9aa0-ea5cc3d83b3d" class="bulleted-list"><li style="list-style-type:disc"><strong>Street Racing</strong>: Race on streets with traffic and people to hit</li></ul><ul id="214d0c64-fa2a-81dd-bae2-e581c480c09b" class="bulleted-list"><li style="list-style-type:disc"><strong>Alien Chase</strong>: Don&#x27;t die or get abducted</li></ul><ul id="214d0c64-fa2a-80d8-81ff-de2cf763d8ed" class="bulleted-list"><li style="list-style-type:disc"><strong>Death Race</strong>: Hit people and make check points to increase your score</li></ul><ul id="214d0c64-fa2a-80a6-bb30-e427fbbd4e2e" class="bulleted-list"><li style="list-style-type:disc"><strong>Open World (64km²)</strong></li></ul><ul id="214d0c64-fa2a-808f-beb8-eae8fc313abc" class="bulleted-list"><li style="list-style-type:disc"><strong>50+ Vehicles</strong></li></ul><ul id="214d0c64-fa2a-80b9-91c0-c7699f4d1dce" class="bulleted-list"><li style="list-style-type:disc"><strong>Upgradeable Cars</strong>: Customize with performance and visual upgrades</li></ul><ul id="214d0c64-fa2a-8064-840f-ee5985567a19" class="bulleted-list"><li style="list-style-type:disc"><strong>Day-Night Cycle &amp; Weather System</strong></li></ul><ul id="214d0c64-fa2a-80e6-adee-f1839446382b" class="bulleted-list"><li style="list-style-type:disc"><strong>Steering Wheel Support with Force Feedback</strong></li></ul><ul id="214d0c64-fa2a-8050-a1c4-d72eca6117d7" class="bulleted-list"><li style="list-style-type:disc"><strong>Surface-Based Traction</strong>: Surface and tire affect grip</li></ul><ul id="214d0c64-fa2a-80c1-959c-ea199e8c8f01" class="bulleted-list"><li style="list-style-type:disc"><strong>Multiple Graphics Options</strong>: Use cell shaded or outlined graphics</li></ul><ul id="214d0c64-fa2a-80bb-9bf9-e4e8b3714269" class="bulleted-list"><li style="list-style-type:disc"><strong>Online Leaderboards</strong></li></ul><ul id="214d0c64-fa2a-805c-b0ac-f4d08e625e84" class="bulleted-list"><li style="list-style-type:disc"><strong>Four Camera Options</strong></li></ul><p id="214d0c64-fa2a-81f9-afed-e93d8d3de1ee" class="">
+</p><figure id="214d0c64-fa2a-815a-a7a1-fc26e76dcd41"><div class="source"><a href="https://docs.google.com/document/d/1fVmNSox9gZui7r2cmsIKjOuXDxXnPqtb63hadsoepe0/export?format=pdf">https://docs.google.com/document/d/1fVmNSox9gZui7r2cmsIKjOuXDxXnPqtb63hadsoepe0/export?format=pdf</a></div></figure><p id="214d0c64-fa2a-8170-9131-f527e6467552" class="">
+</p><h2 id="214d0c64-fa2a-8150-9722-f87be178251d" class="block-color-gray_background">Videos</h2><div id="214d0c64-fa2a-81e0-bfb2-d52b1c517ec5" class="column-list"><div id="214d0c64-fa2a-8119-8ec9-cc5e282a6e61" style="width:100%" class="column"><figure id="214d0c64-fa2a-8155-865c-c09ae1a70224"><div class="source"><a href="https://www.youtube.com/watch?v=h0vs2IvIB2A">https://www.youtube.com/watch?v=h0vs2IvIB2A</a></div></figure><p id="214d0c64-fa2a-8174-bbd1-fd3c0180bed3" class="">
+</p></div><div id="214d0c64-fa2a-8137-8c14-fcce331437f8" style="width:100%" class="column"><figure id="214d0c64-fa2a-81a2-966a-e7c1ca806f81"><div class="source"><a href="https://youtube.com/shorts/cBTIgUS6ETo">https://youtube.com/shorts/cBTIgUS6ETo</a></div></figure><p id="257d0c64-fa2a-8009-9c05-d77d4d92ea1e" class="">
+</p><p id="214d0c64-fa2a-813d-a78b-d39782c73753" class="">
+</p></div></div><h2 id="214d0c64-fa2a-8115-b349-c0a5dba40184" class="block-color-gray_background">Screenshots</h2><div id="214d0c64-fa2a-8112-b708-d6ec869115b7" class="column-list"><div id="214d0c64-fa2a-81b7-b231-c6e33d630b81" style="width:33.33333333333333%" class="column"><figure id="214d0c64-fa2a-81ac-90e9-f9c11354c915" class="image"><a href="Screenshot_(97).png"><img style="width:1920px" src="Screenshot_(97).png"/></a></figure><figure id="214d0c64-fa2a-8180-8315-de99aa70be43" class="image"><a href="vlcsnap-2025-06-04-01h39m08s218.png"><img style="width:199.63333129882812px" src="vlcsnap-2025-06-04-01h39m08s218.png"/></a></figure></div><div id="214d0c64-fa2a-8134-be3d-de52e0e20b7a" style="width:33.33333333333333%" class="column"><figure id="214d0c64-fa2a-8194-b9ed-e8f1e96c2907" class="image"><a href="vlcsnap-2025-06-04-00h25m57s227.png"><img style="width:199.63333129882812px" src="vlcsnap-2025-06-04-00h25m57s227.png"/></a></figure><figure id="214d0c64-fa2a-81e3-ae38-e7a11336e3e1" class="image"><a href="Screenshot_(103).png"><img style="width:1920px" src="Screenshot_(103).png"/></a></figure><p id="214d0c64-fa2a-81a5-a67e-f35be26f2db1" class="">
+</p></div><div id="214d0c64-fa2a-81ce-8e42-dee9a94f4e93" style="width:33.33333333333333%" class="column"><figure id="214d0c64-fa2a-819f-813a-ddaec5d9103a" class="image"><a href="Screenshot_(100).png"><img style="width:1920px" src="Screenshot_(100).png"/></a></figure><figure id="214d0c64-fa2a-8180-9b93-c7d50bc4d411" class="image"><a href="Screenshot_(106).png"><img style="width:1920px" src="Screenshot_(106).png"/></a></figure><p id="257d0c64-fa2a-8096-9fc5-e0d182666989" class="">
+</p><p id="257d0c64-fa2a-80b1-bc3d-f93dbd8cfae4" class="">
+</p><p id="214d0c64-fa2a-812a-bcf2-fb354c73df39" class="">
+</p></div></div><h2 id="214d0c64-fa2a-81b0-b0b5-cdf7a45502b4" class="block-color-gray_background">GIFs</h2><div id="214d0c64-fa2a-8155-ba37-dcc5de544845" class="column-list"><div id="214d0c64-fa2a-8190-98f4-fc5fdf9ca439" style="width:100%" class="column"><figure id="214d0c64-fa2a-81e3-b841-d8ef13427dea" class="image"><a href="CameraStillExplosion-00.00.00.796-00.00.04.749-ezgif.com-optimize.gif"><img style="width:199.86666870117188px" src="CameraStillExplosion-00.00.00.796-00.00.04.749-ezgif.com-optimize.gif"/></a></figure><figure id="214d0c64-fa2a-81b5-898a-ceddaf04d23d" class="image"><a href="ColorChangedCombined.gif"><img style="width:199.61666870117188px" src="ColorChangedCombined.gif"/></a></figure><p id="214d0c64-fa2a-816d-afb3-e5d8e937a56f" class="">
+</p></div><div id="214d0c64-fa2a-814b-9a3f-d96c7fd714e9" style="width:100%" class="column"><figure id="214d0c64-fa2a-81b3-9d17-c296a210faa7" class="image"><a href="ezgif.com-optimize.gif"><img style="width:199.86666870117188px" src="ezgif.com-optimize.gif"/></a></figure><figure id="257d0c64-fa2a-80dc-9963-c8f30d52b92c" class="image"><a href="MuscleCarDeathRaceHitPeople-ezgif.com-optimize.gif"><img style="width:199.86666870117188px" src="MuscleCarDeathRaceHitPeople-ezgif.com-optimize.gif"/></a></figure><figure id="214d0c64-fa2a-816b-b44c-f3d432248a8c" class="image"><a href="CarChoice.gif"><img style="width:199.61666870117188px" src="CarChoice.gif"/></a></figure><p id="214d0c64-fa2a-81db-b925-f4e3c98df711" class="">
+</p></div><div id="214d0c64-fa2a-81b5-8c73-fb6553d24999" style="width:100%" class="column"><figure id="214d0c64-fa2a-81ec-a856-debc6a3867a7" class="image"><a href="FrontRightAlienChase-ezgif.com-optimize.gif"><img style="width:199.8666534423828px" src="FrontRightAlienChase-ezgif.com-optimize.gif"/></a></figure><figure id="214d0c64-fa2a-81d3-a314-c9262fc606d2" class="image"><a href="ChangeCarFast.gif"><img style="width:199.61666870117188px" src="ChangeCarFast.gif"/></a></figure><p id="214d0c64-fa2a-8156-8726-df6c6c555585" class="">
+</p></div></div><h2 id="214d0c64-fa2a-814b-8dd6-c4eaa3e7b401" class="block-color-gray_background">Game brand &amp; social assets</h2><div id="214d0c64-fa2a-8108-97a2-e078c6a2e6b8" class="column-list"><div id="214d0c64-fa2a-8140-92df-c686d93fe96e" style="width:50%" class="column"><h3 id="214d0c64-fa2a-81d5-8300-d1df386a06bb" class="block-color-gray_background">Logo</h3><figure id="214d0c64-fa2a-8162-b7ce-f58ab752bec4" class="image"><a href="Jacks_510_Racing_library_logo.png"><img style="width:322.4666748046875px" src="Jacks_510_Racing_library_logo.png"/></a></figure><h3 id="214d0c64-fa2a-811d-935e-c704606e64f3" class="block-color-gray_background">Keyart</h3><figure id="214d0c64-fa2a-8177-ab15-cae3de5a257e" class="image"><a href="Jacks_510_Racing_main_capsule.png"><img style="width:322.45001220703125px" src="Jacks_510_Racing_main_capsule.png"/></a></figure><p id="214d0c64-fa2a-80f3-b0ec-eddab51dc6af" class="">
+</p></div><div id="214d0c64-fa2a-81be-bb00-d9c8de28afd2" style="width:49.99999999999999%" class="column"><h3 id="214d0c64-fa2a-8133-b5d5-f17fbf9c8f6d" class="block-color-gray_background">Steam Art</h3><div id="214d0c64-fa2a-8195-a238-f4b44cc420ed" class="column-list"><div id="214d0c64-fa2a-81ac-ae2f-f6cd8d7b8e85" style="width:100%" class="column"><figure id="214d0c64-fa2a-81ab-9791-e860a3a975cf" class="image"><a href="Jacks_510_Racing_header_capsule.png"><img style="width:138.23333740234375px" src="Jacks_510_Racing_header_capsule.png"/></a></figure><p id="214d0c64-fa2a-800c-ad92-f85cd1b965ce" class="">
+</p><figure id="214d0c64-fa2a-8080-9398-f89bac08bf68" class="image"><a href="Jacks_510_Racing_page_background.png"><img style="width:138.23333740234375px" src="Jacks_510_Racing_page_background.png"/></a></figure><figure id="214d0c64-fa2a-800a-a48c-e3c2312bdf7b" class="image"><a href="Jacks_510_Racing_vertical_capsule.png"><img style="width:138.23333740234375px" src="Jacks_510_Racing_vertical_capsule.png"/></a></figure></div><div id="214d0c64-fa2a-8129-962e-c2a8fb996fba" style="width:100%" class="column"><figure id="214d0c64-fa2a-81ef-a033-e7304fbbbf4b" class="image"><a href="Jacks_510_Racing_library_capsule.png"><img style="width:138.23333740234375px" src="Jacks_510_Racing_library_capsule.png"/></a></figure><figure id="214d0c64-fa2a-8030-83e4-e3f08890c8d0" class="image"><a href="Jacks_510_Racing_small_capsule_no_Logo_(1).png"><img style="width:138.21665954589844px" src="Jacks_510_Racing_small_capsule_no_Logo_(1).png"/></a></figure><figure id="214d0c64-fa2a-80cb-91da-eba918654a3b" class="image"><a href="Jacks_510_Racing_small_capsule.png"><img style="width:138.23333740234375px" src="Jacks_510_Racing_small_capsule.png"/></a></figure></div></div><p id="214d0c64-fa2a-8190-b3d7-d2c11c07cc42" class="">
+</p></div></div><h3 id="214d0c64-fa2a-8168-b8c5-c46f3327ba6e" class="block-color-gray_background">Fonts &amp; colors</h3><figure id="214d0c64-fa2a-81a2-9b20-e849dbd93f67"><div class="source"><a href="Bangers.ttf">Bangers.ttf</a></div></figure><p id="214d0c64-fa2a-8156-a78f-c9a8dd33dddf" class="">
+</p></div></div><p id="214d0c64-fa2a-8101-93e0-fe54839767f8" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
